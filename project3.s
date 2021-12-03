@@ -11,3 +11,11 @@ main:
     la $a0,input 					
     li $a1, 1001 								
     syscall
+
+
+subprogram:
+sub $sp, $sp,4
+sb $a0, 0($sp)
+lb $t0, 0($sp)
+addi $sp,$sp,4
+move $t6, $t0
