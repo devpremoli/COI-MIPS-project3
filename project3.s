@@ -19,3 +19,11 @@ sb $a0, 0($sp)
 lb $t0, 0($sp)
 addi $sp,$sp,4
 move $t6, $t0
+
+start: 				 				
+lb $s0, ($t0)
+beq $s0, 9, removing							
+beq $s0, 32, removing 
+
+
+removing:
