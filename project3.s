@@ -26,6 +26,14 @@ beq $s0, 9, removing
 beq $s0, 32, removing 
 
 
+beq $s0, 0, substring 		
+beq $s0, 10, substring
+beq $s0, 44, substring
+
 removing:
 addi $t0,$t0,1
 j start
+
+
+substring:
+
