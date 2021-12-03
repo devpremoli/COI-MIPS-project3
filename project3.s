@@ -27,3 +27,5 @@ beq $s0, 32, removing
 
 
 removing:
+addi $t0,$t0,1
+j start
