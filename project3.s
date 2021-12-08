@@ -107,6 +107,15 @@ subprogram3:
     ble $s0, 57, number
     ble $s0, 81, uppercase
     ble $s0, 113, lowercase
+    
+number:
+sub $s0, $s0, 48
+beq $t3, 0, mixed
+li $t9, 27
+
+mixed:
+
+
 display:
 mul $t1,$t1,4
 add $sp, $sp, $t1
