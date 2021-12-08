@@ -66,6 +66,13 @@ addi $t0,$t0,1
 beq $s0, 44, inside
 j invalid
 
+inside:
+addi $t1,$t1,1
+sub $sp, $sp,4
+sw $t7, 0($sp)
+move $t6,$t0
+
+
 removing:
 addi $t0,$t0,1
 j start
