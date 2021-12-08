@@ -149,6 +149,8 @@ ble $t8, 1, mixed
 mul $t9, $t9, 27
 addi $t8, $t8, -1
 
+finish : jr $ra
+
 display:
 mul $t1,$t1,4
 add $sp, $sp, $t1
@@ -169,4 +171,3 @@ la $a0, comma
 syscall
 j end
 
-finish : jr $ra
