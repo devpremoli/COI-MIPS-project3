@@ -57,7 +57,9 @@ valid:
 addi $t3, $t3,1
 mul $t2,$t2,$t7
 j loop
-    
+
+invalid:
+lb $s0, ($t0)
 
 removing:
 addi $t0,$t0,1
