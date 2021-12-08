@@ -29,10 +29,8 @@ li $t2,0
 li $t7, -1				 				
 lb $s0, ($t0)
 beq $s0, 9, removing							
-beq $s0, 32, removing 
-beq $s0, 0, substring 		
-beq $s0, 10, substring
-beq $s0, 44, substring
+beq $s0, 32, removing
+move $t6, $t0 
 j loop
 
 loop:
