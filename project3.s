@@ -171,3 +171,8 @@ la $a0, comma
 syscall
 j end
 
+dashprinting:
+li $v0, 4
+la $a0, prompt
+syscall
+j comma
