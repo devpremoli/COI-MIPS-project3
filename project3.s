@@ -120,6 +120,11 @@ sub $s0, $s0, 87
 beq $t3, 0, mixed
 li $t9, 27
 
+uppercase:
+sub $s0, $s0, 55
+beq $t3, 0, mixed
+li $t9, 27
+
 
 mixed:
 
