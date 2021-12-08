@@ -101,7 +101,12 @@ addi $t3,$t3,-1
 lb $s0, ($t4)
 addi $t4,$t4,1
 
-
+subprogram3:
+    move $t8, $t3
+    li $t9, 1
+    ble $s0, 57, number
+    ble $s0, 81, uppercase
+    ble $s0, 113, lowercase
 display:
 mul $t1,$t1,4
 add $sp, $sp, $t1
