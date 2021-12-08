@@ -88,6 +88,11 @@ j start
 
 
 substring:
+bgt $t2,0,inside
+bge $t3,5,inside
+addi $t1,$t1,1
+sub $sp, $sp,4
+sw $t6, 0($sp)
 
 display:
 mul $t1,$t1,4
