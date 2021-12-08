@@ -12,6 +12,8 @@ main:
     li $a1, 1001 								
     syscall
 
+forward:
+    j display
 
 subprogram:
 sub $sp, $sp,4
@@ -79,4 +81,8 @@ j start
 
 
 substring:
+
+display:
+mul $t1,$t1,4
+add $sp, $sp $t1
 
