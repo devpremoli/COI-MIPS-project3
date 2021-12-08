@@ -24,11 +24,18 @@ start:
 lb $s0, ($t0)
 beq $s0, 9, removing							
 beq $s0, 32, removing 
-
-
 beq $s0, 0, substring 		
 beq $s0, 10, substring
 beq $s0, 44, substring
+
+
+checking:
+beq $s0, 9,  skipping 							# if tab, move to gap function
+beq $s0, 32, skipping
+ble $s0, 47, invalid 
+ble $s0, 57, valid 					
+ble $s0, 64, invalid
+    
 
 removing:
 addi $t0,$t0,1
