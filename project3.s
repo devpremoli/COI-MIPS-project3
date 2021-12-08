@@ -73,6 +73,9 @@ addi $t1,$t1,1
 sub $sp, $sp,4
 sw $t7, 0($sp)
 move $t6,$t0
+lb $s0, ($t0)
+beq $s0, 0, forward
+beq $s0, 10, forward
 
 
 removing:
@@ -84,5 +87,5 @@ substring:
 
 display:
 mul $t1,$t1,4
-add $sp, $sp $t1
+add $sp, $sp, $t1
 
