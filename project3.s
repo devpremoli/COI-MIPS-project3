@@ -114,20 +114,28 @@ number:
 sub $s0, $s0, 48
 beq $t3, 0, mixed
 li $t9, 27
+j exponent
 
 lowercase:
 sub $s0, $s0, 87
 beq $t3, 0, mixed
 li $t9, 27
+j exponent
 
 uppercase:
 sub $s0, $s0, 55
 beq $t3, 0, mixed
 li $t9, 27
+j exponent
 
 
 mixed:
 
+
+exponent:
+ble $t8, 1, mixed
+mul $t9, $t9, 27
+addi $t8, $t8, -1
 
 display:
 mul $t1,$t1,4
