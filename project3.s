@@ -60,6 +60,7 @@ bgt $s0, 113, invalid
 
 
 skipping:
+addi $t2,$t2,-1
 j loop
 
 valid:
