@@ -33,6 +33,11 @@ beq $s0, 32, removing
 move $t6, $t0 
 j loop
 
+
+removing:
+addi $t0,$t0,1
+j start
+
 loop:
 lb $s0, ($t0) 							
 beq $s0, 0, substring 					
@@ -84,9 +89,7 @@ li $t2,0
 j loop
 
 
-removing:
-addi $t0,$t0,1
-j start
+
 
 
 substring:
