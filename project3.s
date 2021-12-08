@@ -35,6 +35,10 @@ beq $s0, 32, skipping
 ble $s0, 47, invalid 
 ble $s0, 57, valid 					
 ble $s0, 64, invalid
+ble $s0, 81, valid 						# starting with A (capital) = valid
+ble $s0, 96, invalid 						# less than 96 = invalid
+ble $s0, 113, valid 						# less than 117 (u) = valid
+bgt $s0, 113, invalid
     
 
 removing:
