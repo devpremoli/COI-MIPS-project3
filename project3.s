@@ -60,6 +60,11 @@ j loop
 
 invalid:
 lb $s0, ($t0)
+beq $s0, 0, inside
+beq $s0, 10, inside
+addi $t0,$t0,1
+beq $s0, 44, inside
+j invalid
 
 removing:
 addi $t0,$t0,1
