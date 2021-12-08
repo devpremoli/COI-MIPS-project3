@@ -95,8 +95,11 @@ sub $sp, $sp,4
 sw $t6, 0($sp)
 
 
-
+subprogram2:
 beq $t3,0,finish
+addi $t3,$t3,-1
+lb $s0, ($t4)
+addi $t4,$t4,1
 
 
 display:
