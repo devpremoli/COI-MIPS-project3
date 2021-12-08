@@ -94,7 +94,14 @@ addi $t1,$t1,1
 sub $sp, $sp,4
 sw $t6, 0($sp)
 
+
+
+beq $t3,0,finish
+
+
 display:
 mul $t1,$t1,4
 add $sp, $sp, $t1
 
+
+finish : jr $ra
