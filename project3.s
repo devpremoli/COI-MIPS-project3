@@ -100,7 +100,12 @@ addi $t1,$t1,1
 sub $sp, $sp,4
 sw $t6, 0($sp)
 
-
+jal subprogram2
+lb $s0, ($t0)
+beq $s0, 0, forward
+beq $s0, 10, forward
+    
+    
 subprogram2:
 beq $t3,0,finish
 addi $t3,$t3,-1
