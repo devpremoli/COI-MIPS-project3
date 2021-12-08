@@ -115,6 +115,12 @@ sub $s0, $s0, 48
 beq $t3, 0, mixed
 li $t9, 27
 
+lowercase:
+sub $s0, $s0, 87
+beq $t3, 0, mixed
+li $t9, 27
+
+
 mixed:
 
 
