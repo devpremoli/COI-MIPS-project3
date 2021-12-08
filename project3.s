@@ -104,6 +104,10 @@ lb $s0, ($t4)
 addi $t4,$t4,1
 j subprogram3
 
+moving:
+    sw $s1,0($sp)
+    j subprogram2
+
 subprogram3:
     move $t8, $t3
     li $t9, 1
