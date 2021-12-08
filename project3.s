@@ -162,5 +162,11 @@ li $v0, 1
 lw $a0, 0($sp)
 syscall
 
+comma:
+beq $t1, 0,Exit
+li $v0, 4
+la $a0, comma
+syscall
+j end
 
 finish : jr $ra
