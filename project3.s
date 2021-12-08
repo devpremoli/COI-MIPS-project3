@@ -12,6 +12,8 @@ main:
     li $a1, 1001 								
     syscall
 
+jal subprogram
+
 forward:
     j display
 
