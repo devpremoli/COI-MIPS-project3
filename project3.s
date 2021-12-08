@@ -109,15 +109,15 @@ addi $t4,$t4,1
 j subprogram3
 
 moving:
-    sw $s1,0($sp)
-    j subprogram2
+sw $s1,0($sp)
+j subprogram2
 
 subprogram3:
-    move $t8, $t3
-    li $t9, 1
-    ble $s0, 57, number
-    ble $s0, 81, uppercase
-    ble $s0, 113, lowercase
+move $t8, $t3
+li $t9, 1
+ble $s0, 57, number
+ble $s0, 81, uppercase
+ble $s0, 113, lowercase
     
 number:
 sub $s0, $s0, 48
@@ -152,6 +152,12 @@ addi $t8, $t8, -1
 display:
 mul $t1,$t1,4
 add $sp, $sp, $t1
+
+end:
+sub $t1, $t1,4
+sub $sp,$sp,4
+lw $s7, 0($sp)
+beq $s7,-1,dashprinting
 
 
 finish : jr $ra
