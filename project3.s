@@ -104,6 +104,9 @@ jal subprogram2
 lb $s0, ($t0)
 beq $s0, 0, forward
 beq $s0, 10, forward
+beq $s0,44, invalid
+li $t2,0
+j loop
     
     
 subprogram2:
