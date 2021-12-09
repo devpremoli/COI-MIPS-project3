@@ -12,10 +12,10 @@ main:
     li $a1, 1001 								
     syscall
 
-jal subprogram
+    jal subprogram
 
 forward:
-    j display
+j display
 
 subprogram:
 sub $sp, $sp,4
