@@ -172,7 +172,7 @@ li $v0, 1
 lw $a0, 0($sp)
 syscall
 
-comma:
+commaprinting:
 beq $t1, 0,Exit
 li $v0, 4
 la $a0, comma
@@ -183,7 +183,7 @@ dashprinting:
 li $v0, 4
 la $a0, prompt
 syscall
-j comma
+j commaprinting
 
 Exit:
 li $v0, 10
