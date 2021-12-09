@@ -159,6 +159,7 @@ exponent:
 ble $t8, 1, mixed
 mul $t9, $t9, 27
 addi $t8, $t8, -1
+j exponent
 
 finish : jr $ra
 
