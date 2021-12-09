@@ -12,7 +12,7 @@ la $a0,input
 li $a1, 1001 								
 syscall
 
-    jal subprogram
+jal subprogram
 
 forward:
 j display
