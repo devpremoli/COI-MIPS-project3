@@ -19,8 +19,8 @@ j display
 
 subprogram:
 sub $sp, $sp,4
-sb $a0, 0($sp)
-lb $t0, 0($sp)
+sw $a0, 0($sp)
+lw $t0, 0($sp)
 addi $sp,$sp,4
 move $t6, $t0
 
